@@ -5,7 +5,8 @@
 %{!?nfsmountable: %global nfsmountable 1}
 %scl_package %scl
 
-%{!?scl_perl:%global scl_perl rh-perl530}
+##{!?scl_perl:%global scl_perl rh-perl530}
+%global scl_perl rh-perl530
 %{!?scl_prefix_perl:%global scl_prefix_perl %{scl_perl}-}
 
 # do not produce empty debuginfo package
@@ -17,7 +18,7 @@
 Summary:       Package that installs %scl
 Name:          %scl_name
 Version:       1.18
-Release:       4%{?dist}
+Release:       5%{?dist}
 License:       GPLv2+
 Group: Applications/File
 Source0: README
@@ -193,7 +194,7 @@ selinuxenabled && load_policy || :
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
-* Wed Sep 16 2020 Lubos Uhliarik <luhliari@redhat.com> - 1.18-4
+* Wed Sep 16 2020 Lubos Uhliarik <luhliari@redhat.com> - 1.18-5
 - Switch rh-nginx118 to rh-perl530
 
 * Tue Jul 21 2020 Lubos Uhliarik <luhliari@redhat.com> - 1.18-1
