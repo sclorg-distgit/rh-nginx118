@@ -1,0 +1,43 @@
+.TH %{scl_name} "7" "" "nginx %{version} Software Collection" "User Commands"
+.SH NAME
+%{scl_name} \- manual page for nginx %{version} Software Collection
+.SH SYNOPSIS
+.B scl
+\fIenable %{scl_name} \[aq]nginx\[aq]\fR
+.PP
+.B %{service_start}
+.SH DESCRIPTION
+Package %{scl_name} provides the nginx web server as a Software
+Collection. For more information about Software Collections,
+see the \fIscl\fR(1) man page. By installing the %{scl_name} collection,
+you will get the minimum working set of packages to have a working nginx
+web server.
+.PP
+Software Collections allows the use of applications which are not located
+in the filesystem root hierarchy but are present in an alternative
+location, which is \fI%{_scl_root}\fR in case of the %{scl_name}
+collection.
+.PP
+nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 and
+IMAP protocols, with a strong focus on high concurrency, performance and low
+memory usage.
+.PP
+When you want to work with the %{scl_name} collection, use the \fBscl\fR
+utility (see the \fIscl\fR(1) man page for usage) to enable the scl
+environment.
+.SH EXAMPLES
+scl enable %{scl_name} \[aq]\fIcommand\fR \fB\-\-arg\fR\[aq]
+.IP
+Runs a specific \fIcommand\fR with the argument \fB\-\-arg\fR within the
+environment of the %{scl_name} software collection.
+.PP
+scl enable %{scl_name} bash
+.IP
+Run an interactive shell with the %{scl_name} software collection enabled.
+.PP
+scl enable %{scl_name} \[aq]man nginx\[aq]
+.IP
+Show man pages for the nginx command, which is a part of the
+%{scl_name} software collection.
+.SH "REPORTING BUGS"
+Report bugs to <https://bugzilla.redhat.com/>.

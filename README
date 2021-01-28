@@ -1,0 +1,45 @@
+NAME
+       %{scl_name}  -  manual page for %{scl_name} %{version} Software Collec‐
+       tion
+
+SYNOPSIS
+       scl enable %{scl_name} 'nginx'
+
+       %{service_start}
+
+DESCRIPTION
+       Package %{scl_name} provides Nginx web server as a Software Collection.
+       For  more  information  about  Software Collections, see the scl(1) man
+       page. By installing the %{scl_name} collection, you will get the mini‐
+       mum working set of packages to have a working nginx web server.
+
+       Software Collections allows the use of applications which are not located
+       in the filesystem root hierarchy but are present in an alternative
+       location, which is %{_scl_root} in case of the %{scl_name} collection.
+
+       Nginx  is  a web server and a reverse proxy server for HTTP, SMTP, POP3
+       and IMAP protocols, with a strong focus on  high  concurrency,  perfor‐
+       mance and low memory usage.
+
+       When  you  want	to  work  with the %{scl_name} collection, use the scl
+       utility (see the scl(1) man page for usage) to enable the scl  environ‐
+       ment.
+
+EXAMPLES
+       scl enable %{scl_name} 'command --arg'
+
+	      Run  a  specific command  with  the  argument  --arg within the
+	      environment of the %{scl_name} software collection.
+
+       scl enable %{scl_name} bash
+
+	      Run  an  interactive shell with the %{scl_name} software collec‐
+	      tion enabled.
+
+       scl enable %{scl_name} 'man nginx'
+
+	      Show man pages for the nginx command, which is  a	 part  of  the
+	      %{scl_name} software collection.
+
+REPORTING BUGS
+       Report bugs to <http://bugzilla.redhat.com>.
